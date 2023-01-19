@@ -5,6 +5,8 @@ import { v4 as uuid } from 'uuid';
 export const handler = async (event: APIGatewayProxyEvent) => {
   try {
     const body = JSON.parse(event.body);
+    const tableName = process.env.urlTable;
+    const baseUrl = process.env.baseUrl;
     const originalUrl = body.url;
 
     const code = uuid().slice(0, 8);
