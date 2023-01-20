@@ -1,6 +1,7 @@
 import { formatJSONResponse } from "@libs/apiGateway";
 import { APIGatewayProxyEvent } from "aws-lambda";
 import { v4 as uuid } from 'uuid';
+import { dynamo } from '@libs/dynamo';
 
 export const handler = async (event: APIGatewayProxyEvent) => {
   try {
