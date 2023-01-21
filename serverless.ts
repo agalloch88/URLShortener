@@ -34,7 +34,7 @@ const serverlessConfiguration: AWS = {
           [
             "https://",
             { Ref: "HttpApi" },
-            ".execut-api.${self:provider.region}.amazonaws.com",
+            ".execute-api.${self:provider.region}.amazonaws.com",
           ],
         ],
       },
